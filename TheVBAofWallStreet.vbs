@@ -190,4 +190,33 @@ Sub cleanSheets()
     ' Back to the first sheet
     Worksheets(1).Select
 End Sub
+' THE CODE BELOW PREVENT Subscript out of range ON ARRAY'
+Sub mainCode()
+Dim name, year As String
+Dim vArray() As String
+Dim totalSheets, r As Integer
 
+totalSheets = Worksheets.Count
+
+    For ws = 1 To totalSheets
+        Worksheets(ws).Select
+        
+        vArray = Split(Sheets(ws).name, "_")
+        name = vArray(0)
+        Cells(1, 1).Value = name
+        
+        
+        For r = 2 To 6 Step 1
+            ReDim vArray(1 To 100)
+            vArray = Split(Cells(1, r).Value, " ")
+            If UBound(vArray) >= 3 Then
+                year = vArray(3)
+                Cells(1, r).Value = year
+            End If
+            
+        Next r
+        
+        
+    Next ws
+    
+End Sub
