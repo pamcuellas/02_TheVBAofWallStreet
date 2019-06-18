@@ -9,4 +9,6 @@ Steps to run this VBA script:
 
 3 - Run the mainCode sub imported on the VB interface.
 
-Remark: If you want to rerun the script over the same workbook, you can clean up the workbook before by running sub cleanSheets.
+Remarks: 
+1 - If you want to rerun the script over the same workbook, you can clean up the workbook before by running sub cleanSheets;
+2 - Be aware that the script has 'Option Explicit' declaration. So, you must remove it if you already have in your code.
