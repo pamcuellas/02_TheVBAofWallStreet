@@ -1,4 +1,4 @@
-# 02_TheVBAofWallStreet
+# The VBA of Wall Street
 The VBA of WallStreet- This is a VBA script to compute some numbers on Multiple_year_stock_data.xlsx or alphabtical_testing.xlsx workbooks.
 
 Steps to run this VBA script:
